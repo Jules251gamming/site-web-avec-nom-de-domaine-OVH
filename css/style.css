@@ -1,0 +1,201 @@
+/* ================================================= */
+/* VARIABLES ET STYLES GÉNÉRAUX             */
+/* ================================================= */
+
+:root {
+    --orange-accent: #FF6600; /* Orange vif pour les accents, les boutons et les titres */
+    --background-dark: #1A1A1A; /* Fond sombre principal */
+    --background-card: #222222; /* Fond pour les cartes/blocs (règles, fonctionnalités) */
+    --text-light: #FFFFFF; /* Texte blanc pour la lisibilité sur fond sombre */
+    --text-secondary: #AAAAAA; /* Gris clair pour les sous-titres et les paragraphes secondaires */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Police moderne importée via HTML */
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-dark); 
+    color: var(--text-light); 
+    line-height: 1.6;
+}
+
+a {
+    color: var(--orange-accent); /* Liens par défaut en orange */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #E65C00; 
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/* --- Boutons et Accents Oranges --- */
+.btn-orange, .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--orange-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-orange:hover, .btn-primary:hover {
+    background-color: #E65C00;
+    transform: translateY(-1px);
+}
+
+/* ================================================= */
+/* STRUCTURE ET NAVIGATION               */
+/* ================================================= */
+
+/* En-tête (pour la page d'accueil) */
+.hero-section {
+    /* Si vous mettez une image de fond GTA RP, l'ajouter ici */
+    /* background: url('../img/banniere.jpg') no-repeat center center/cover; */
+    padding: 80px 0 120px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    /* Optionnel: pour un effet professionnel sur une image de fond */
+    /* background-color: rgba(0, 0, 0, 0.7); */ 
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--orange-accent); /* Logo en orange */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    font-weight: 400;
+    padding-bottom: 3px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--orange-accent);
+    border-bottom: 2px solid var(--orange-accent);
+}
+
+/* Contenu de la Bannière (Page d'accueil) */
+.hero-content {
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+
+/* ================================================= */
+/* STYLES DES SECTIONS COMMUNES           */
+/* ================================================= */
+
+main {
+    padding: 50px 0;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+/* --- Titres des Pages/Sections --- */
+.title-orange {
+    color: var(--orange-accent); 
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* --- Ligne de Séparation --- */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--orange-accent);
+    margin: 30px 0;
+    opacity: 0.5;
+}
+
+/* ================================================= */
+/* STYLES SPÉCIFIQUES AU RÈGLEMENT        */
+/* ================================================= */
+
+.regle-section h2 {
+    color: var(--orange-accent); 
+    border-bottom: 2px solid var(--background-card);
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.regle-item {
+    background-color: var(--background-card); 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.regle-item h3 {
+    color: var(--text-light); 
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* ================================================= */
+/* PIED DE PAGE (Footer)           */
+/* ================================================= */
+
+footer {
+    background-color: #0F0F0F; /* Très sombre */
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid rgba(255, 102, 0, 0.3); /* Petite ligne orange */
+}
