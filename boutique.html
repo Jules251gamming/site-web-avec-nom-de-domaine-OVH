@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique Officielle - Serveur RP</title>
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
             --text-color: #FFFFFF;
             --glow-light: #5ff9d8; /* Couleur utilisée pour le glow des titres */
             --card-background: #232323;
-            --card-hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Nouvelle ombre au survol */
+            --card-hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
         }
 
         body {
@@ -33,7 +34,7 @@
         /* Amélioration Générale de la Typographie et des Conteneurs */
         .content-container {
             width: 90%;
-            max-width: 1400px; /* Plus large pour la grille de 4 */
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px 0;
         }
@@ -43,7 +44,7 @@
             text-align: center;
             font-weight: 700;
             font-size: 2.5em;
-            text-shadow: 0 0 10px rgba(255, 107, 107, 0.4); /* Petit glow sur le titre */
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.4); 
         }
 
         .subtitle, .section-description {
@@ -127,29 +128,29 @@
             border-bottom: none !important;
         }
 
-        /* --- GRILLES ET CARTES PRODUITS (Amélioration Graphique) --- */
+        /* --- GRILLES ET CARTES PRODUITS --- */
         .product-grid {
             display: grid;
-            gap: 30px; /* Espace augmenté */
+            gap: 30px; 
             margin-top: 30px;
-            padding: 0 10px; /* Léger padding pour les bords */
+            padding: 0 10px; 
         }
 
         .product-card {
             background-color: var(--card-background);
             padding: 25px;
-            border-radius: 12px; /* Rayon plus prononcé */
+            border-radius: 12px; 
             text-align: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour le survol */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
         }
 
         .product-card:hover {
-            transform: translateY(-5px); /* Léger soulèvement */
-            box-shadow: var(--card-hover-shadow); /* Ombre au survol */
+            transform: translateY(-5px); 
+            box-shadow: var(--card-hover-shadow); 
         }
 
         .product-card h4 {
@@ -164,7 +165,7 @@
             font-weight: 700;
             color: var(--glow-light);
             margin: 15px 0 20px;
-            text-shadow: 0 0 8px rgba(95, 249, 216, 0.3); /* Petit glow sur le prix */
+            text-shadow: 0 0 8px rgba(95, 249, 216, 0.3); 
         }
 
         .product-card .tag {
@@ -184,7 +185,7 @@
             padding: 5px 15px;
             font-size: 0.8em;
             font-weight: 700;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); /* Forme de ruban */
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); 
         }
 
         .badge.gold { background-color: #FFD700; color: #1a1a1a; }
@@ -237,15 +238,15 @@
         /* Surlignage VIP/Packs Spéciaux */
         .gold-border { border: 2px solid #FFD700 !important; }
         .diamond-border { border: 2px solid #00BFFF !important; }
-        .ultimate-border { border: 3px solid #FF4500 !important; box-shadow: 0 0 20px rgba(255, 69, 0, 0.7) !important; } /* Ombre plus intense pour l'Ultime */
-        .ultimate-border:hover { transform: scale(1.03) translateY(-5px); } /* Plus d'impact au survol */
+        .ultimate-border { border: 3px solid #FF4500 !important; box-shadow: 0 0 20px rgba(255, 69, 0, 0.7) !important; } 
+        .ultimate-border:hover { transform: scale(1.03) translateY(-5px); } 
 
         /* Styles spécifiques aux Coins */
         .coin-card {
             border-color: rgba(255, 140, 0, 0.3) !important;
         }
         .coin-card .features i {
-            color: #FFD700; /* Coins en Or */
+            color: #FFD700; 
         }
 
         /* Listes d'avantages longues */
@@ -303,7 +304,7 @@
                 grid-template-columns: repeat(2, 1fr) !important;
             }
             nav ul {
-                display: none; /* Simplification de la navigation pour mobile */
+                display: none; 
             }
             nav {
                 justify-content: center;
@@ -317,8 +318,13 @@
                 font-size: 2em;
             }
         }
-
     </style>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ duration: 1000 });
+        });
+    </script>
 </head>
 <body>
 
@@ -357,7 +363,7 @@
                             <li><i class="fas fa-check-circle"></i> Rôle Discord exclusif</li>
                             <li><i class="fas fa-check-circle"></i> 500 $ en jeu (par semaine)</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                        <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
 
                     <div class="product-card is-gold" data-aos="zoom-in-up" data-aos-delay="200">
@@ -371,7 +377,7 @@
                             <li><i class="fas fa-star"></i> Kit de démarrage amélioré</li>
                             <li><i class="fas fa-star"></i> 1 500 $ en jeu (par semaine)</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
 
                     <div class="product-card is-diamond" data-aos="zoom-in-up" data-aos-delay="300">
@@ -385,7 +391,7 @@
                             <li><i class="fas fa-gem"></i> Accès à des vêtements uniques</li>
                             <li><i class="fas fa-gem"></i> Possibilité de customiser une plaque</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                     
                     <div class="product-card ultimate-border" data-aos="zoom-in-up" data-aos-delay="400">
@@ -399,7 +405,7 @@
                             <li><i class="fas fa-paint-roller"></i> 1 Peinture chromée offerte</li>
                             <li><i class="fas fa-warehouse"></i> +2 places de garage permanentes</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                 </div>
             </section>
@@ -421,7 +427,7 @@
                             <li><i class="fas fa-coins"></i> 1000 Coins HRP</li>
                             <li><i class="fas fa-gift"></i> Bonus : 0%</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                     <div class="product-card coin-card is-hot" data-aos="zoom-in-up" data-aos-delay="50">
                         <span class="badge orange">Populaire</span>
@@ -432,7 +438,7 @@
                             <li><i class="fas fa-coins"></i> 1500 Coins HRP</li>
                             <li><i class="fas fa-gift"></i> Bonus : 0%</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                     <div class="product-card coin-card" data-aos="zoom-in-up" data-aos-delay="100">
                         <span class="badge orange">Boost</span>
@@ -443,7 +449,7 @@
                             <li><i class="fas fa-coins"></i> 2000 Coins HRP</li>
                             <li><i class="fas fa-gift"></i> Bonus : 0%</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                     <div class="product-card coin-card is-diamond" data-aos="zoom-in-up" data-aos-delay="150">
                         <span class="badge diamond">Max Value</span>
@@ -454,7 +460,7 @@
                             <li><i class="fas fa-coins"></i> 2600 Coins HRP</li>
                             <li><i class="fas fa-gift"></i> Bonus : 4%</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                 </div>
 
@@ -468,7 +474,7 @@
                             <li><i class="fas fa-coins"></i> 3000 Coins HRP</li>
                             <li><i class="fas fa-gift"></i> Bonus : 0%</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                     <div class="product-card coin-card is-hot" data-aos="zoom-in-up" data-aos-delay="50">
                         <span class="badge gold">Grand Bonus</span>
@@ -479,7 +485,7 @@
                             <li><i class="fas fa-coins"></i> 5500 Coins HRP</li>
                             <li><i class="fas fa-gift"></i> Bonus : 10%</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                     <div class="product-card coin-card ultimate-border" data-aos="zoom-in-up" data-aos-delay="100">
                         <span class="badge diamond">MAX COINS</span>
@@ -490,10 +496,9 @@
                             <li><i class="fas fa-coins"></i> 11 500 Coins HRP</li>
                             <li><i class="fas fa-gift"></i> Bonus : 15%</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                 </div>
-
 
                 <h4 style="color: var(--glow-light); margin-top: 50px; text-align: left;"><i class="fas fa-trophy"></i> Packs de Soutien (Fonctionnalités HRP)</h4>
                 <p class="section-description" style="color: #bbb;">Ces packs offrent des avantages concrets en jeu, sans pour autant atteindre le niveau de soutien Ultime (100€+).</p>
@@ -511,7 +516,7 @@
                             <li><i class="fas fa-check-double"></i> File d'attente prioritaire (Tier 1)</li>
                             <li><i class="fas fa-id-card"></i> 1 Vêtement exclusif Bronze HRP</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
 
                     <div class="product-card coin-card gold-border is-hot" data-aos="zoom-in" data-aos-delay="50">
@@ -526,7 +531,7 @@
                             <li><i class="fas fa-location-arrow"></i> Révélation de 1 lieu secret HRP</li>
                             <li><i class="fas fa-warehouse"></i> +1 Place de garage (30j)</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
 
                     <div class="product-card coin-card ultimate-border" data-aos="zoom-in" data-aos-delay="100">
@@ -543,7 +548,7 @@
                             <li><i class="fas fa-toolbox"></i> 5 Kits de réparation avancée (HRP)</li>
                             <li><i class="fas fa-money-bill-wave"></i> Effacement de 5 contraventions (HRP Admin)</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                 </div>
 
@@ -579,7 +584,7 @@
                             <li><i class="fas fa-bolt"></i> **90 Boosts** de performance esthétique pour un véhicule (7 jours). **(310 - 399)**</li>
                             <li><i class="fas fa-medal"></i> **1 Ticket** de réduction de peine légère (Admin HRP). **(400)**</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
 
                     <div class="product-card coin-card gold-border" data-aos="zoom-in" data-aos-delay="50">
@@ -592,7 +597,7 @@
                             <li><i class="fas fa-id-card"></i> Accès à 2 Vêtements HRP</li>
                             <li><i class="fas fa-map-marked-alt"></i> Révélation de 1 lieu secret HRP</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
 
                     <div class="product-card coin-card gold-border" data-aos="zoom-in" data-aos-delay="100">
@@ -605,7 +610,7 @@
                             <li><i class="fas fa-sync"></i> 2 Changements de plaque offerts</li>
                             <li><i class="fas fa-warehouse"></i> +1 Place de garage (30j)</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
 
                     <div class="product-card coin-card gold-border" data-aos="zoom-in" data-aos-delay="150">
@@ -618,7 +623,7 @@
                             <li><i class="fas fa-toolbox"></i> 1 Kit de réparation avancé (HRP)</li>
                             <li><i class="fas fa-check-double"></i> File d'attente prioritaire Tier 3</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                     
                     <div class="product-card coin-card diamond-border" data-aos="zoom-in">
@@ -631,135 +636,54 @@
                             <li><i class="fas fa-location-arrow"></i> 1 Demande de modification de météo (HRP Admin, 24h)</li>
                             <li><i class="fas fa-id-badge"></i> 1 Changement d'apparence offert</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
 
                     <div class="product-card coin-card diamond-border" data-aos="zoom-in" data-aos-delay="50">
                         <h4 style="font-size: 1.1em;">Soutien Progressif VI (75€)</h4>
-                        <span class="tag">Bonus 22%</span>
-                        <div class="price">75€</div>
                         <ul class="features-long">
-                            <li><i class="fas fa-coins"></i> **9 150 Coins** HRP</li>
-                            <li><i class="fas fa-house-user"></i> Droit d'achat d'un emplacement de maison rare (priorité faible)</li>
-                            <li><i class="fas fa-money-bill-wave"></i> Effacement de 5 contraventions (HRP Admin)</li>
-                            <li><i class="fas fa-paint-roller"></i> Accès à 1 peinture néon exclusive (HRP)</li>
+                            <li>(Contenu manquant)</li>
                         </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
-                    </div>
-
-                    <div class="product-card coin-card diamond-border" data-aos="zoom-in" data-aos-delay="100">
-                        <h4 style="font-size: 1.1em;">Soutien Progressif VII (85€)</h4>
-                        <span class="tag">Bonus 25%</span>
-                        <div class="price">85€</div>
-                        <ul class="features-long">
-                            <li><i class="fas fa-coins"></i> **10 625 Coins** HRP</li>
-                            <li><i class="fas fa-car-side"></i> 1 Véhicule Légendaire (7j)</li>
-                            <li><i class="fas fa-star-of-life"></i> Réduction de 10% sur les temps de ban (selon la gravité)</li>
-                            <li><i class="fas fa-money-check-alt"></i> 1 Semaine sans facture d'eau/électricité (HRP)</li>
-                        </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
-                    </div>
-
-                    <div class="product-card coin-card ultimate-border is-diamond" data-aos="zoom-in" data-aos-delay="150">
-                        <span class="badge diamond">MAX PROGRESSIF</span>
-                        <h4 style="font-size: 1.2em;">Soutien ULTIME C (100€)</h4>
-                        <span class="tag">Bonus 30% + Liste Massive</span>
-                        <div class="price">100€</div>
-                        <ul class="features-long">
-                            <li><i class="fas fa-coins"></i> **13 000 Coins HRP** (10 000 + 3000 Bonus)</li>
-                            <li><i class="fas fa-star"></i> Accès prioritaire Tier 4</li>
-                            <li><i class="fas fa-medal"></i> Rôle Discord **Progression MAX** à vie</li>
-                            <li><i class="fas fa-warehouse"></i> **+5 Places de garage** permanentes</li>
-                            <li><i class="fas fa-car"></i> Accès permanent à **TOUS** les véhicules VIP Tier 1 (HRP)</li>
-                            <li><i class="fas fa-paint-brush"></i> Accès à **10 Tatouages** exclusifs HRP</li>
-                            <li><i class="fas fa-truck-moving"></i> **Téléportation** de véhicule illimitée (7 jours)</li>
-                            <li><i class="fas fa-id-badge"></i> **1 Changement de nom** RP gratuit</li>
-                            <li><i class="fas fa-tools"></i> **20 Kits** de réparation avancée pour véhicule (HRP)</li>
-                            <li><i class="fas fa-paint-roller"></i> Accès à la **peinture Chromée** pour 1 véhicule (HRP)</li>
-                            <li><i class="fas fa-gift"></i> **280x** Petit Boost HRP (Cadeaux cosmétiques aléatoires)</li>
-                            <li><i class="fas fa-bolt"></i> Boost de performance esthétique illimité pour 1 véhicule (HRP)</li>
-                            <li><i class="fas fa-dice-d20"></i> Création d'une Emote personnelle (HRP, selon l'Admin)</li>
-                            <li><i class="fas fa-lock-open"></i> 1 Ticket de réduction de peine de prison/ban léger (HRP Admin)</li>
-                            <li><i class="fas fa-money-bill-wave"></i> Effacement de 10 contraventions (HRP Admin)</li>
-                            <li><i class="fas fa-map-marked-alt"></i> Révélation de 3 lieux secrets HRP</li>
-                            <li><i class="fas fa-gas-pump"></i> Faire le plein de tous vos véhicules (1 fois par semaine, 30j)</li>
-                            <li><i class="fas fa-user-friends"></i> 5 Clés supplémentaires pour votre logement actuel (HRP)</li>
-                            <li><i class="fas fa-star-of-life"></i> Réduction de 15% sur les temps de ban (selon la gravité)</li>
-                            <li><i class="fas fa-home"></i> Priorité élevée pour l'achat de 2 emplacements de maison rares</li>
-                            <li><i class="fas fa-trophy"></i> **Titre Discord** "Bâtisseur" à vie</li>
-                        </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
+                         <a href="#paiement-manuel" class="btn-primary">Acheter (Virement)</a>
                     </div>
                 </div>
-
-                <h4 style="color: var(--glow-light); margin-top: 50px; text-align: left;"><i class="fas fa-trophy"></i> Packs de Soutien Ultime (200€ et plus)</h4>
-                <p class="section-description" style="color: #bbb;">Ces packs reprennent les niveaux de soutien massif pour les contributeurs exceptionnels.</p>
-                
-                <div class="product-grid" style="grid-template-columns: repeat(3, 1fr);">
-                    
-                    <div class="product-card coin-card gold-border" data-aos="zoom-in">
-                        <h4 style="font-size: 1.2em;">Pack Soutien Élite I (200€)</h4>
-                        <span class="tag">Bonus 25% + Avantages RP</span>
-                        <div class="price">200€</div>
-                        <ul class="features-long">
-                            <li><i class="fas fa-coins"></i> **25 000 Coins HRP** (20 000 + 5000 Bonus)</li>
-                            <li><i class="fas fa-crown"></i> Badge Forum/Discord **"Grand Donateur"**</li>
-                            <li><i class="fas fa-car"></i> Accès à **1 Véhicule** Élite II (Tier 3) exclusif (HRP)</li>
-                            <li><i class="fas fa-box-open"></i> **10 Kits** de réparation avancée pour véhicule (HRP)</li>
-                            <li><i class="fas fa-wrench"></i> **1 Demande** de modification mineure d'un objet existant (skin/couleur)</li>
-                            <li><i class="fas fa-chart-line"></i> **Réduction de 5%** sur toutes les taxes de business (30j)</li>
-                            <li><i class="fas fa-check-double"></i> File d'attente prioritaire **Tier 5**</li>
-                        </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
-                    </div>
-                    
-                    <div class="product-card coin-card gold-border" data-aos="zoom-in" data-aos-delay="50">
-                        <h4 style="font-size: 1.2em;">Pack Soutien Élite II (300€)</h4>
-                        <span class="tag">Bonus 30% + Confort Ultime</span>
-                        <div class="price">300€</div>
-                        <ul class="features-long">
-                            <li><i class="fas fa-coins"></i> **39 000 Coins HRP** (30 000 + 9000 Bonus)</li>
-                            <li><i class="fas fa-house-user"></i> Droit d'achat d'un **emplacement de maison rare** (Sous condition RP)</li>
-                            <li><i class="fas fa-truck-moving"></i> **Téléportation** de véhicule personnelle **illimitée (30j)**</li>
-                            <li><i class="fas fa-map-marked-alt"></i> Révélation de **3 lieux secrets** HRP</li>
-                            <li><i class="fas fa-paint-roller"></i> Accès à la **peinture Chromée** pour 1 véhicule (HRP)</li>
-                            <li><i class="fas fa-user-friends"></i> **5 Clés** supplémentaires pour votre logement actuel (HRP)</li>
-                            <li><i class="fas fa-check-double"></i> File d'attente prioritaire **Tier 6**</li>
-                        </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
-                    </div>
-                    
-                    <div class="product-card coin-card gold-border" data-aos="zoom-in" data-aos-delay="100">
-                        <h4 style="font-size: 1.2em;">Pack Soutien Élite III (400€)</h4>
-                        <span class="tag">Bonus 35% + Prestige</span>
-                        <div class="price">400€</div>
-                        <ul class="features-long">
-                            <li><i class="fas fa-coins"></i> **54 000 Coins HRP** (40 000 + 14 000 Bonus)</li>
-                            <li><i class="fas fa-car-alt"></i> **Véhicule Majestueux I** (Tier 4) exclusif (HRP)</li>
-                            <li><i class="fas fa-warehouse"></i> **+2 Places de garage** permanentes</li>
-                            <li><i class="fas fa-lock-open"></i> **1 Ticket** de réduction de peine de prison/ban léger (HRP Admin)</li>
-                            <li><i class="fas fa-id-badge"></i> **1 Changement de nom** RP gratuit (par mois)</li>
-                            <li><i class="fas fa-money-bill-wave"></i> **Effacement** de **10 contraventions** (HRP Admin)</li>
-                            <li><i class="fas fa-check-double"></i> File d'attente prioritaire **Tier 7**</li>
-                        </ul>
-                        <a href="#" class="btn-primary">Acheter</a>
-                    </div>
-                    </div>
             </section>
+
+            <hr>
+            
+            <section id="paiement-manuel" style="margin-top: 50px; padding: 40px; background-color: #2a2a2a; border-radius: 12px; border: 1px solid var(--primary-color);" data-aos="fade-up">
+                <h3 style="color: var(--primary-color); text-align: center; border-bottom: none; font-size: 1.8em;">🏦 Paiement par Virement Bancaire (RIB/IBAN)</h3>
+                <p style="text-align: center; color: #ccc; font-size: 1.1em;">
+                    Cette méthode est **manuelle**. La validation de votre achat sera effectuée par un administrateur sous **24h à 48h** après réception.
+                </p>
+
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 30px;">
+                    
+                    <div style="background-color: #333; padding: 25px; border-radius: 8px; width: 100%; max-width: 600px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+                        <h4 style="color: #5ff9d8; margin-top: 0;"><i class="fas fa-university"></i> Nos Coordonnées Bancaires :</h4>
+                        <p style="margin: 5px 0;"><strong>Titulaire du compte :</strong> [Votre Nom ou Nom de l'Organisation]</p>
+                        <p style="margin: 5px 0;"><strong>IBAN :</strong> <code style="color: #fff; background-color: #1a1a1a; padding: 4px 8px; border-radius: 4px; display: inline-block;">[VOTRE IBAN COMPLET ICI]</code></p>
+                        <p style="margin: 5px 0;"><strong>BIC :</strong> <code style="color: #fff; background-color: #1a1a1a; padding: 4px 8px; border-radius: 4px; display: inline-block;">[VOTRE CODE BIC ICI]</code></p>
+                    </div>
+
+                    <div style="background-color: #333; padding: 25px; border-radius: 8px; width: 100%; max-width: 600px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+                        <h4 style="color: #5ff9d8; margin-top: 0;"><i class="fas fa-clipboard-list"></i> Procédure à Suivre (TRÈS IMPORTANT) :</h4>
+                        <ol style="padding-left: 20px; color: #fff; list-style-type: none;">
+                            <li style="margin-bottom: 10px;">**1.** Effectuez le virement du **montant exact** de l'article choisi.</li>
+                            <li style="margin-bottom: 10px;">**2.** Dans le champ **Référence / Communication** du virement, indiquez OBLIGATOIREMENT : <br><code style="color: #FFD700; background-color: #1a1a1a; padding: 4px 8px; border-radius: 4px; display: inline-block; font-weight: 700;">[NOM DE L'ARTICLE] - [VOTRE PSEUDO DISCORD]</code></li>
+                            <li style="margin-bottom: 10px;">**3.** Après le virement, contactez un administrateur sur Discord pour signaler votre paiement et accélérer la validation.</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </section>
+
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Serveur RP. Tous droits réservés.</p>
+        <p>&copy; 2025 Serveur New Life RP. Tous droits réservés.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-    </script>
-
-</body>
+    </body>
 </html>
